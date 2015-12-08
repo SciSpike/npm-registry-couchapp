@@ -85,6 +85,7 @@ module.exports =
   , { from: "/npm/public/registry/:pkg/_attachments/:att/:rev", to: "../../:pkg/:att", method: "DELETE" }
   , { from: "/npm/public/registry/:pkg/_attachments/:att/-rev/:rev", to: "../../:pkg/:att", method: "DELETE" }
 
+  , { from: "/:pkg/-/latest", to: "/_view/latestAttachment/:pkg", method: "GET"}
   , { from: "/:pkg/-/:att", to: "../../:pkg/:att", method: "GET" }
   , { from: "/:pkg/-/:att/:rev", to: "../../:pkg/:att", method: "PUT" }
   , { from: "/:pkg/-/:att/-rev/:rev", to: "../../:pkg/:att", method: "PUT" }
