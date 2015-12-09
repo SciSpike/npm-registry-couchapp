@@ -2,7 +2,7 @@
 var shows = exports
 
 shows.latestAttachment = function(doc, req) {  
-  for(var att in doc._attachments){return;}
+  for(var att in doc._attachments){}
   return { code : 301, headers : { 'Location' : '/'+doc._id+'/-/'+att } };
 }
 
